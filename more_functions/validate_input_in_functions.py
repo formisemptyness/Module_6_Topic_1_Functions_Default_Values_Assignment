@@ -14,7 +14,7 @@
         #return string with test_name and invalid_message #such as 'Test 2: Invalid Test Score!'
     #exception
         #return string with test_name and invalid_message #such as 'Test 2: Invalid Test Score!'
-def score_input(test_name='Test 1', test_score=-1, invalid_message = 'Invalid test score!'):
+def score_input(test_name='', test_score=-1, invalid_message = 'Invalid test score!'):
     try:
         int(test_score)
     except:
@@ -25,7 +25,8 @@ def score_input(test_name='Test 1', test_score=-1, invalid_message = 'Invalid te
         return(test_name, invalid_message)
 
 #Write your drive code here
-display_string = score_input('Test 1', 'z',)
+format_string = score_input('Test 1',100)
+display_string = f"{format_string[0]}: {format_string[1]}"
 print(display_string)
 #the one that starts with if __name__ == '__main__':
 if __name__ == '__main__':
